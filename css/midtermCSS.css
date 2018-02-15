@@ -1,0 +1,121 @@
+/* Set the background to a grayish color */
+body {
+	background-color: #C5C6C7;
+}
+
+/* These next 3 input blocks are for the buttons and text boxes. 
+   I'm only changing color and size, as well as alignment */
+input[type="text"][disabled] {
+   background-color: darkgray;
+}
+
+input[type="number"][disabled] {
+   background-color: darkgray;
+}
+
+input[type="button"] {
+   width: 100px;
+   height: 50px;
+   font-weight: bold;
+   font-size: 18px;
+   display: inline-block;
+}
+
+/* The Div that contains the entire tool. Formats it as a centered 
+   rectangle with coloring, border, padding, and margins */
+#Utility {
+	width: 975px;
+	height: 500px;
+	margin-top: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 6px;
+	border-style: solid;
+	border-color: #45A29E;
+    border-width: 6px 6px 6px 6px;
+	background-color: #1F2833;
+	color: white;
+	display: block;
+}
+
+/* For the top margin of the tool that where the MSRP field is. 
+   This just gives it a border and some padding */
+#General { 
+	border-style: solid;
+	border-color: #45A29E;
+    border-width: 0px 0px 1px 0px;
+	padding-bottom: 5px;
+}
+
+/* This is the square that contains the first financing option. This gives 
+   is a border and a set width and height. Since it is displayed as an 
+   inline-block so that other options can appear next to it, I align the 
+   top vertically */
+#Finance1 {
+	border-style: solid;
+	border-color: #45A29E;
+    border-width: 0px 1px 0px 0px;
+	width: 302px;
+	height: 360px;
+	display: inline-block;
+	vertical-align: top;
+	padding: 9px;
+}
+/* This is the same thing as Finance1, but with different borders */
+#Finance2 {
+	border-style: solid;
+	border-color: #45A29E;
+    border-width: 0px 1px 0px 1px;
+	width: 302px;
+	height: 360px;
+	display: inline-block;
+	vertical-align: top;
+	padding: 9px;
+}
+
+/* This is the same thing as Finance1 and Finance 2, but with different borders */
+#Lease {
+	border-style: solid;
+	border-color: #45A29E;
+    border-width: 0px 0px 0px 1px;
+	width: 302px;
+	height: 360px;
+	display: inline-block;
+	vertical-align: top;
+	padding: 9px;
+}
+
+/* This is for the area at the bottom where the buttons are. 
+   I'm only adding borders and padding to it */
+#CalculateDiv {
+	border-style: solid;
+	border-color: #45A29E;
+    border-width: 1px 0px 0px 0px;
+	padding: 10px;
+}
+
+/* This class is for the title of each option and the General Information text */
+.Title {
+	font-weight: bold;
+	font-size: 20px;
+	display: block;
+	text-align: center;
+	margin-bottom: 8px;
+}
+
+/* This class formats the output text and sets a background color as well as a border */
+.Output {
+	border-style: solid;
+	border-color: black ;/*#45A29E;*/
+    border-width: 1px 1px 1px 1px;
+	height: 150px;
+	margin-top: 10px;
+	background-color: #0B0C10;
+	padding: 6px;
+	color: orange;
+}
+
+/* Sets a height for the tables that I used to format the input fields */
+.tbl {
+	height: 150px;
+}

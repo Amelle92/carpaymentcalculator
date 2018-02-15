@@ -1,0 +1,151 @@
+<!--
+ Name: Adam Melle
+ Adam_Melle@student.uml.edu
+ UMass Lowell
+ Comp.4610, GUI Programming I
+ File: /usr/cs/2016/amelle/public_html/Midterm/midterm.html
+ Created: 19-Oct-2017
+ Last updated by AM: 24-Oct-2017, 3:27pm
+ Description: Tool used for comparing financing and leasing 
+ options for cars. The example button can be used to auto input 
+ example information and the clear button will clear all input 
+ and output fields
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+		<link rel="stylesheet" href="css/midtermCSS.css">
+		<title>Midterm</title>
+		<!--Script that generates example input into fields-->
+		<script src="js/Example.js"></script>
+		<!--Script that clears all input and output-->
+		<script src="js/Clear.js"></script>
+		<!--Script that does all the calculations for output-->
+		<script src="js/Calculate.js"></script>
+	</head>
+	
+	<body>
+		<!--Utility Div wrap the entire body as a formatting technique-->
+		<div id="Utility">
+			<!--General Information at the top of the tool-->
+			<div id="General">
+				<span class="Title">General Information</span>
+				<label for="MilesPerYear">Estimated Miles/Year</label>
+				<input type="number" id="MilesPerYear">
+				<label for="MSRP">MSRP</label>
+				<input type="number" id="MSRP">
+			</div>
+			<!--The Financing option 1-->
+			<div id="Finance1">
+				<span class="Title">Finance Option 1</span>
+				<div class="tbl">
+					<!--Table is used for formatting the input fields-->
+					<table>
+						<tr>
+							<th></th>
+							<th></th>
+						</tr>
+						<tr>
+							<td><label for="DownPaymentPercent1">Down Payment %</label></td>
+							<td><input type="number" id="DownPaymentPercent1"></td>
+						</tr>
+						<tr>
+							<td><label for="Months1"># of Months</label></td>
+							<td><input type="number" id="Months1"></td>
+						</tr>
+						<tr>
+							<td><label for="Interest1">Annual Interest %</label></td>
+							<td><input type="number" id="Interest1"></td>
+						</tr>
+						<tr>
+							<td><label for="Incentives1">Incentives -$</label></td>
+							<td><input type="number" id="Incentives1"></td>
+						</tr>
+					</table>
+				</div>
+				<!--Financing Option 1's output that is manipulated by JS-->
+				<div class="Output" id="Out1">
+				</div>
+			</div>
+			
+			<!--The Financing option 2-->
+			<div id="Finance2">
+				<span class="Title">Finance Option 2</span>
+				<div class="tbl">
+					<!--Table is used for formatting the input fields-->
+					<table>
+						<tr>
+							<th></th>
+							<th></th>
+						</tr>
+						<tr>
+							<td><label for="DownPaymentPercent2">Down Payment %</label></td>
+							<td><input type="number" id="DownPaymentPercent2"></td>
+						</tr>
+						<tr>
+							<td><label for="Months2"># of Months</label></td>
+							<td><input type="number" id="Months2"></td>
+						</tr>
+						<tr>
+							<td><label for="Interest2">Annual Interest %</label></td>
+							<td><input type="number" id="Interest2"></td>
+						</tr>
+						<tr>
+							<td><label for="Incentives2">Incentives -$</label></td>
+							<td><input type="number" id="Incentives2"></td>
+						</tr>
+					</table>
+				</div>
+				<!--Financing Option 2's output that is manipulated by JS-->
+				<div class="Output" id="Out2">
+				</div>
+			</div>
+			
+			<!--The Lease option-->
+			<div id="Lease">
+				<span class="Title">Lease</span>
+				<div class="tbl">
+					<!--Table is used for formatting the input fields-->
+					<table>
+						<tr>
+							<th></th>
+							<th></th>
+						</tr>
+						<tr>
+							<td><label for="DownPaymentPercent3">Down Payment %</label></td>
+							<td><input type="number" id="DownPaymentPercent3"></td>
+						</tr>
+						<tr>
+							<td><label for="MonthlyPayment3">Monthly Payment</label></td>
+							<td><input type="number" id="MonthlyPayment3"></td>
+						</tr>
+						<tr>
+							<td><label for="Months3"># of Months</label></td>
+							<td><input type="number" id="Months3"></td>
+						</tr>
+						<tr>
+							<td><label for="Overage">$/Mile Overage</label></td>
+							<td><input type="number" id="Overage"></td>
+						</tr>
+						<tr>
+							<td><label for="MilesIncluded">Miles Included</label></td>
+							<td><input type="number" id="MilesIncluded"></td>
+						</tr>
+					</table>
+				</div>
+				<!--Lease option's output that is manipulated by JS-->
+				<div class="Output" id="Out3">
+				</div>
+			</div>
+			<!--Bottom portion of the tool with the Calculate, Clear, and Example button-->
+			<div id="CalculateDiv">
+				<input type="button" value="Calculate" onclick="CalculateMonthlyPayment()">
+				<input type="button" value="Clear" onclick="Clear()">
+				<input type="button" value="Example" onclick="Example()">
+			</div>
+		<!--End of Utility Div-->
+		</div>
+	</body>
+</html>
